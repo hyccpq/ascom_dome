@@ -21,24 +21,7 @@ void browserServer(){
     server.on("/status",                HTTP_GET, [](AsyncWebServerRequest *request) {
         AsyncResponseStream *response = request->beginResponseStream("application/json");
         response->printf("{");
-        response->printf("\"dome\":");
-        #ifdef DOME
-            response->printf("1");
-        #else
-            response->printf("0");
-        #endif
-            response->printf(",\"switch\":");
-        #ifdef SWITCH
-            response->printf("1");
-        #else
-            response->printf("0");
-        #endif
-                response->printf(",\"cover\":");
-        #ifdef COVERC
-            response->printf("1");
-        #else
-            response->printf("0");
-        #endif
+        response->printf("\"dome\":1");
         response->printf(",\"freeHeap\":");
         response->print(ESP.getFreeHeap());
         response->printf(",\"minFreeHeap\":");
@@ -56,24 +39,7 @@ void browserServer(){
     server.on("/get-config",                HTTP_GET, [](AsyncWebServerRequest *request) {
         AsyncResponseStream *response = request->beginResponseStream("application/json");
         response->print("{");
-        response->printf("\"dome\":");
-        #ifdef DOME
-            response->printf("1");
-        #else
-            response->printf("0");
-        #endif
-            response->printf(",\"switch\":");
-        #ifdef SWITCH
-            response->printf("1");
-        #else
-            response->printf("0");
-        #endif
-                response->printf(",\"cover\":");
-        #ifdef COVERC
-            response->printf("1");
-        #else
-            response->printf("0");
-        #endif
+        response->printf("\"dome\":1");
         response->printf(",\"board\":{\"alpRemPort\":");
         response->print(Config.alpacaPort.remotePort);
         response->printf(",\"alpPort\":");

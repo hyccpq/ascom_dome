@@ -6,16 +6,9 @@ void main_loop(){
     saveConfig();
     #ifdef DOME 
     domehandlerloop();
+    domeSerialLoop();
     #endif
 
-    #ifdef COVERC
-    coverCLoop();
-    #endif
-
-    #ifdef SWITCH
-    switchLoop();
-    #endif
-    
     ElegantOTA.loop();
     unsigned long currentMillis = millis();
 

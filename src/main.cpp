@@ -10,9 +10,6 @@ Only in this case comment the #define GATE_BOARD
 #define GATE_BOARD
 #endif
 
-#define SWITCH
-#define COVERC
-
 #include <WiFi.h>
 #include "AsyncJson.h"
 #include "AsyncUDP.h"
@@ -22,8 +19,6 @@ Only in this case comment the #define GATE_BOARD
 #include <stdint.h>
 #include "SPIFFS.h"
 #include "Dome/domeVariable.h"
-#include "Switches/switchVariable.h"
-#include "CoverC/coverVariable.h"
 #include "header.h"
 #include <ElegantOTA.h>
 
@@ -33,15 +28,9 @@ AsyncWebServer Alpserver(4567);
 #include "Alpaca/AlpacaManageFunction.h"
 #ifdef DOME
 #include "Dome/dome.h"
+#include "Dome/serialControl.h"
 #endif
 
-#ifdef SWITCH
-#include "Switches/switch.h"
-#endif
-
-#ifdef COVERC
-#include "CoverC/cover.h"
-#endif
 #include "browserServer.h"
 #include "configuration.h"
 
@@ -64,17 +53,8 @@ void setup()
 
   #ifdef DOME
   initDomeConfig();
+  domeSerialSetup();
   Serial.println("dome init done");
-  #endif
-
-  #ifdef SWITCH
-  initSwitchConfig();
-  Serial.println("switch init done");
-  #endif
-
-  #ifdef COVERC
-  initCoverCConfig();
-  Serial.println("cover init done");
   #endif
 
   Serial.println("Listening for discovery requests...");
@@ -109,17 +89,8 @@ void setup()
   domeServer();
   #endif
   
-  #ifdef SWITCH
-  switchServer();
-  #endif
-
-  #ifdef COVERC
-  coverServer();
-  #endif
-
   browserServer();
 
-  /** END SWITCH SPECIFIC METHODS **/
   Alpserver.begin();
   ElegantOTA.begin(&server);
   server.begin();

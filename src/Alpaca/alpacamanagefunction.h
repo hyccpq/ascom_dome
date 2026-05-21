@@ -22,20 +22,9 @@ void AlpacaNoErrorSchema(AsyncResponseStream *response, bool comma = true){
 }
 
 void GetAlpArguments(AsyncWebServerRequest *request ) {
-  AlpacaData.switches.idExist = false;
-  AlpacaData.switches.intValueExist = false;
-  AlpacaData.switches.nameExist = false;
-  AlpacaData.switches.stateExist = false;
-  AlpacaData.switches.intValueExist = false;
-  AlpacaData.switches.nameExist = false;
-  AlpacaData.switches.stateExist = false;
   AlpacaData.clientID = 0;
   AlpacaData.clientTransactionID = 0;
   AlpacaData.boConnect = false;
-  AlpacaData.switches.id = -1;
-  AlpacaData.switches.state = false;
-  AlpacaData.switches.intValue = -1;
-  AlpacaData.coverC.brightness = -1;
   int paramsNr = request->params();
   String parameter;
   AlpacaData.serverTransactionID++;
@@ -60,33 +49,6 @@ void GetAlpArguments(AsyncWebServerRequest *request ) {
         AlpacaData.boConnect = false;
       }
     }
-    if (parameter == "id") {
-      AlpacaData.switches.idExist = true;
-      AlpacaData.switches.id = p->value().toInt();
-    }
-    if (parameter == "value") {
-      AlpacaData.switches.intValueExist = true;
-      AlpacaData.switches.intValue = p->value().toInt();
-    }
-    if (parameter == "name") {
-      AlpacaData.switches.nameExist = true;
-      AlpacaData.switches.name = p->value();
-    }
-    if (parameter == "state") {
-      AlpacaData.switches.stateExist = true;
-      String booleanString;
-      booleanString = p->value();
-      booleanString.toLowerCase();      
-      if ( booleanString == "true"){
-        AlpacaData.switches.state = true;
-      } else {
-        AlpacaData.switches.state = false;
-      }
-    } 
-    if (parameter == "brightness") {
-      AlpacaData.coverC.brightness = p->value().toInt();
-    }       
-    
   }
 }
 
@@ -144,7 +106,7 @@ void AlpacaManager(){
   Alpserver.on("/management/v1/description",                HTTP_GET, [](AsyncWebServerRequest *request) {
     AsyncResponseStream *response = request->beginResponseStream("application/json");
     GetAlpArguments(request);
-    response->print(F("{\"Value\": {\"ServerName\": \"StefanoTesla Alpaca Device\",\"Manufacturer\":\"The Stefano Tesla Company\",\"ManufacturerVersion\":\"v2.0.0\",\"Location\":\"Empoli, IT\"},"));
+    response->print(F("{\"Value\": {\"ServerName\": \"Kalecgos Alpaca Device\",\"Manufacturer\":\"The Stefano Kalec Company\",\"ManufacturerVersion\":\"v2.0.0\",\"Location\":\"Empoli, IT\"},"));
   response->printf("%s%d,%s%d}",
                                 Alp_CliTraId,AlpacaData.clientTransactionID,
                                 Alp_SerTraId,AlpacaData.serverTransactionID
@@ -156,9 +118,7 @@ void AlpacaManager(){
     AsyncResponseStream *response = request->beginResponseStream("application/json");
     GetAlpArguments(request);
     response->print(F("{\"Value\":["));
-    response->print(F("{\"DeviceName\": \"TeslaDome\",\"DeviceType\": \"Dome\",\"DeviceNumber\": 0,\"UniqueID\":\"e989c9b6-ba0f-4834-b299-79a629f2ee59\"},"));
-    response->print(F("{\"DeviceName\":\"TeslaSwitch\",\"DeviceType\":\"Switch\",\"DeviceNumber\":0,\"UniqueID\":\"d93f20fb-aa85-49ed-8799-9f50c0969ede\"},"));
-    response->print(F("{\"DeviceName\":\"TeslaCoverCalibratior\",\"DeviceType\":\"CoverCalibrator\",\"DeviceNumber\":0,\"UniqueID\":\"35672690-40bf-4165-b44e-d59c2c524f11\"}"));
+    response->print(F("{\"DeviceName\":\"KalecDome\",\"DeviceType\":\"Dome\",\"DeviceNumber\":0,\"UniqueID\":\"e989c9b6-ba0f-4834-b299-79a629f2ee59\"}"));
     response->print(F("],"));
     response->printf("%s%d,%s%d",
       Alp_CliTraId,AlpacaData.clientTransactionID,

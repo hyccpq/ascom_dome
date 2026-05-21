@@ -1,5 +1,3 @@
-unsigned int pwmchannles = 1;//channel 0 is reserved to coverCalibrator
-
 /* ALPACA DATA */
 
 struct AlpacaCommonData{
@@ -8,9 +6,6 @@ struct AlpacaCommonData{
   uint32_t clientID;
   unsigned long LastServerRequest;
   bool boConnect;
-  //domeAlpacaParameters dome;
-  switchAlpacaParameters switches;
-  coverCAlpacaParameters coverC;
 };
 
 AlpacaCommonData AlpacaData;
@@ -26,19 +21,11 @@ struct boardSaveConfigStruct{
 };
 struct saveConfigStruct{
   domeSaveConfigStruct dome;
-  switchSaveConfigStruct switches;
-  coverCSaveConfigStruct coverC;
   boardSaveConfigStruct board;
 };
 
 struct validConfig{
   domeLoadConfigStruct dome ;
-  switchLoadConfigStruct switches;
-  coverCLoadConfigStruct coverC;
-};
-
-struct coverCalibrationSetting {
-  unsigned int pin = 0;
 };
 
 struct AlpacaPortsStruct{
@@ -50,8 +37,6 @@ struct ConfigStruct{
   saveConfigStruct save;
   validConfig read;
   domeConfig dome;
-  coverCalibrationSetting coverC;
-  switchConfig switches;
   AlpacaPortsStruct alpacaPort;
 };
 

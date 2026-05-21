@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <script defer src="/alpine.js" type="module"></script>
   <link rel="stylesheet" href="/style.css" />
-  <title>Setup - TeslaBoard</title>
+  <title>Setup - KalecBoard</title>
 </head>
 <body>
 <header x-data="{ open: false }" @resize.window="width = (window.innerWidth > 0) ? window.innerWidth : screen.width;if (width > 767) {open = false}">
@@ -15,7 +15,7 @@
 <div class="flex justify-between">
   <div class="self-center">
   <!-- Website Logo -->
-  <span class="font-semibold text-lg">StefanoTesla</span>
+  <span class="font-semibold text-lg">Kalecgos</span>
   </div>
   <!-- Primary Navbar items -->
   <div class="hidden md:flex items-center space-x-1">
@@ -41,7 +41,7 @@
   </div>
   </nav>
   </header>
-  <div class=""><h1 class="text-center text-xl">StefanoTesla Dome&Switch</h1></div>
+  <div class=""><h1 class="text-center text-xl">Kalecgos Dome</h1></div>
     <div x-data="globalData()">
     <!--DOME-->
     <template x-if="exist.dome">
@@ -79,75 +79,6 @@
     </div>
   </template>
     <!--DOME-->
-
-    <!-- COVER CALIBRATOR -->
-    <template x-if="exist.coverc">
-      <div class="main-tab bg-slate-600"
-        x-data="{open:false}"
-        >
-
-        <div class="tab-header" >
-          <div class="grow">Cover Calibration</div>
-          <div><button @click="open = ! open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="#fff" fill="#fff"><path d="M12 3v2h5.586L5 17.586V12H3v9h9v-2H6.414L19 6.414V12h2V3h-9z"/></svg></button></div>
-        </div>
-
-        <div class="tab-content" x-show="open" x-transition>
-          <div>
-            <p>Pin: <input x-on:change="validatePinNumber($event)" type="number" id="coverpin"  x-model="cover.pin"/></p>
-        </div>
-
-          <div class="pt-2">
-              <button @click="saveCoverSetting()" class="button button_green">Salva</button>
-              <a href="/ccalibconfig.txt" download class="button button_green">Scarica Configurazione</a>
-          </div>
-
-        </div>
-
-      </div>
-    </template>
-    <!--SWITCH-->
-    <template x-if="exist.switch">
-    <div class="main-tab bg-slate-600"
-      x-data="{open:false}">
-
-    <div class="tab-header" >
-      <div class="grow">Switch</div>
-      <div><button @click="open = ! open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="#fff" fill="#fff"><path d="M12 3v2h5.586L5 17.586V12H3v9h9v-2H6.414L19 6.414V12h2V3h-9z"/></svg></button></div>
-    </div>
-
-    
-    <div class="tab-content pt-4" x-show="open" x-transition>
-
-        <template  x-for="(swi, index) in switches" >
-            <div class="my-2 py-2 px-2 rounded-md bg-slate-900">
-                <p class="pt-2">Nome: <input type="text" x-on:change.debounce="validateString($event)" x-model="swi.name"  maxlength="32"/></p>
-                <p class="pt-2">Descrizione: <input type="text" x-on:change.debounce="validateString($event)" x-model="swi.desc"  maxlength="32"/> </p>
-                <div class="flex">
-                  <p class="pt-2">Tipo: </p>
-                  <select class="text-gray-800 px-2" x-model="swi.type">
-                    <option id="0" value="0">-- SELEZIONA --</option>
-                    <option id="1" value="1">Digital Output</option>
-                    <option id="2" value="2">Digital Input</option>
-                    <option id="3" value="3">PWM Output</option>
-                    <option id="4" value="4">Analog Input</option>
-                  </select>
-                </div>
-                <p class="pt-2">Pin: <input x-on:change="validatePinNumber($event)" x-model="swi.pin" type="number" id="dometout" min="1" max="39" /></p>
-                <button @click="removePin(index)" class=" mt-4 button button_red">Rimuovi</button>
-            </div>
-        </template>
-
-        <div class="py-4">
-          <button @click="addPin()" class="button bg-yellow-600">Aggiungi Nuovo Switch</button>
-
-      </div>
-    <div class="pt-2">
-        <button @click="savePinSetting()" class="button button_green">Salva</button>
-        <a href="/switchconfig.txt" download class="button button_green">Scarica Configurazione</a>
-    </div>
-    </div>
-    </div>
-    </template>
     <!-- Ascom-->
 <!--
     <div class="main-tab bg-slate-600"
@@ -217,11 +148,9 @@
   <script>
     function globalData() {
       return {
-        exist: {switch:false,dome:false,coverc:false},
+        exist: {dome:false},
         board: [],
         dome: [],
-        cover: [],
-        switches : [],
         relodRequest : 0,
         pinIdError:0,
         notices: [],
@@ -232,8 +161,6 @@
         reload() {
           this.board = [],
           this.dome = [];
-          this.switches = [];
-          this.cover = [];
           relodRequest : 0;
           pinIdError:0;
           notices: [];
@@ -248,33 +175,12 @@
           });
         },
 
-        getSwitchConfig(){
-          this.switches = []
-          fetch('/api/switch-getconfig')
-          .then(response => response.json())
-          .then(response => {
-            response.switches.forEach((element,index) => (
-              this.switches.push(element)
-            ))
-          });
-        },
-
-        getCoverCConfig(){
-          fetch('/api/coverc-getconfig')
-          .then(response => response.json())
-          .then(response => {
-            this.cover = response.cover;
-          });
-        },
-        
         updateData(){
           fetch('/get-config')
           .then(response => response.json())
           .then(response => {
             this.board = response.board;
             if (response.dome) { this.exist.dome = true,this.getDomeConfig()}
-            if (response.switch) {this.exist.switch = true,this.getSwitchConfig()}
-            if (response.cover) {this.exist.coverc = true,this.getCoverCConfig()}
           });
         },
 
@@ -321,78 +227,6 @@
             .then(response => { if (response.reboot){this.pageRefresh();} else { this.getDomeConfig();this.addToast({type:"success", text:"Dome Saved."})}});
         },
 
-        saveCoverSetting(){
-            this.cover.pin = parseInt(this.cover.pin);
-            if(this.unusablePinForOutput.includes(this.cover.pin)){
-              this.addToast({type:"error", text:"CoverCalib Validation Error, PIN " + this.cover.pin + " cannot be used as output"});
-              return;
-            }
-            fetch('/api/coverc-setconfig',{ 
-              method: 'POST',
-              headers: {"Content-Type": "application/json",},
-              body: JSON.stringify(this.cover)
-            })
-            .then(response => response.json())
-            .then(response => { 
-              if (response.reboot){
-                this.pageRefresh();
-                return
-              }
-              if (response.accept){
-                this.addToast({type:"success", text:"Cover Saved."})
-              }
-            });
-        },
-
-        savePinSetting(){
-          let error;
-
-          this.switches.forEach((element,index) => {
-
-              if(element.type===0 || element.type > 4){
-                  setTimeout(() => {this.addToast({type:"error", text:"SWITCH " + index + " - WRONG TYPE"})}, 1);
-                  error = true;
-                  return
-              }
-
-              if((element.type===1 || element.type===3) && this.unusablePinForOutput.includes(parseInt(element.pin)) ){
-                  error = true;
-                  setTimeout(() => {this.addToast({type:"error", text:"SWITCH " + index + " - pin "+ element.pin +" cannot be used as output"})}, 1);
-                  return
-              }
-
-              if (element.type === 2 && this.unusablePinForInput.includes(parseInt(element.pin)) ){
-                  error = true;
-                  setTimeout(() => {this.addToast({type:"error", text:"SWITCH " + index + " - pin "+ element.pin +" cannot be used as input"})}, 1);
-                  return
-              }
-          })
-
-          if(error){ 
-            setTimeout(() => {this.addToast({type:"error", text:"SWITCH Validation Error"})}, 1);
-            return; 
-          }
-          fetch('/api/switch-saveconfig',{ 
-              method: 'POST',
-              headers: {"Content-Type": "application/json",},
-              body: JSON.stringify(this.switches)
-            })
-            .then(response => response.json())
-            .then(response => { 
-              if (response.reboot){
-                this.pageRefresh();
-              }
-              if (response.accept){
-                this.getSwitchConfig();
-                this.addToast({type:"success", text:"Switch Saved."})
-              }
-              if (response.error){
-                this.getSwitchConfig();
-                this.addToast({type:"error", text:"Data not valid."})
-              }
-            });
-        },
-
         saveBoardSetting(){
           
           fetch('/save-config',{ 
@@ -406,9 +240,6 @@
 
 
         
-        addPin(){if(this.switches.length < 16){ this.switches.push({name: '',desc: '',type: 0,pin: 0});} else { this.addToast({type:"error", text:"CANNOT ADD MORE SWITCH"})}},
-        removePin(index) {this.switches.splice(index, 1);},
-
         pageRefresh(){
           this.relodRequest = 1;
                     setTimeout(function(){
