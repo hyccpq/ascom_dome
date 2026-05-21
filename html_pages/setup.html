@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <script defer src="/alpine.js" type="module"></script>
   <link rel="stylesheet" href="/style.css" />
-  <title>Setup - KalecBoard</title>
+  <title>设置 - KalecBoard</title>
 </head>
 <body>
 <header x-data="{ open: false }" @resize.window="width = (window.innerWidth > 0) ? window.innerWidth : screen.width;if (width > 767) {open = false}">
@@ -19,8 +19,8 @@
   </div>
   <!-- Primary Navbar items -->
   <div class="hidden md:flex items-center space-x-1">
-    <a href="/" class="py-4 px-2 font-semibold hover:text-green-500 transition duration-300">Home</a>
-    <a href="/setup" class="py-4 px-2 font-semibold text-green-800 transition duration-300">Setup</a>
+    <a href="/" class="py-4 px-2 font-semibold hover:text-green-500 transition duration-300">首页</a>
+    <a href="/setup" class="py-4 px-2 font-semibold text-green-800 transition duration-300">设置</a>
   </div>
   <!-- Mobile menu button -->
   <div class="md:hidden flex items-center h-14" >
@@ -35,13 +35,13 @@
   <!-- mobile menu -->
   <div x-show="open" class="mobile-menu">
   <ul class="">
-    <li><a href="/" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Home</a></li>
-    <li><a href="/setup" class="block text-sm px-2 py-4 bg-green-800 transition duration-300">Setup</a></li>
+    <li><a href="/" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">首页</a></li>
+    <li><a href="/setup" class="block text-sm px-2 py-4 bg-green-800 transition duration-300">设置</a></li>
   </ul>
   </div>
   </nav>
   </header>
-  <div class=""><h1 class="text-center text-xl">Kalecgos Dome</h1></div>
+  <div class=""><h1 class="text-center text-xl">Kalecgos 平移顶</h1></div>
     <div x-data="globalData()">
     <!--DOME-->
     <template x-if="exist.dome">
@@ -50,28 +50,28 @@
       >
 
       <div class="tab-header" >
-        <div class="grow">Dome</div>
+        <div class="grow">平移顶</div>
         <div><button @click="open = ! open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="#fff" fill="#fff"><path d="M12 3v2h5.586L5 17.586V12H3v9h9v-2H6.414L19 6.414V12h2V3h-9z"/></svg></button></div>
       </div>
 
       <div class="tab-content" x-show="open" x-transition>
         <div>
-          <p>Pin Start Shutter: <input type="number" x-on:change="validatePinNumber($event)"  x-model="dome.pinstart"/></p>
-          <p>Pin Halt Shutter: <input type="number" x-on:change="validatePinNumber($event)"  x-model="dome.pinhalt"/></p>
-          <p>Pin Shutter Open: <input type="number" x-on:change="validatePinNumber($event)"  x-model="dome.pinopen"/></p>
-          <p>Pin Shutter Close: <input type="number" x-on:change="validatePinNumber($event)"  x-model="dome.pinclose"/></p>
+          <p>打开继电器引脚：<input type="number" x-on:change="validatePinNumber($event)"  x-model="dome.pinstart"/></p>
+          <p>停止继电器引脚：<input type="number" x-on:change="validatePinNumber($event)"  x-model="dome.pinhalt"/></p>
+          <p>打开限位输入引脚：<input type="number" x-on:change="validatePinNumber($event)"  x-model="dome.pinopen"/></p>
+          <p>关闭限位输入引脚：<input type="number" x-on:change="validatePinNumber($event)"  x-model="dome.pinclose"/></p>
       </div>
         <div>
-            <p>Timeout Posizionamento: <input type="number" id="dometout"  x-bind:value="dome.tout" x-model="dome.tout"/> Sec.</p>
+            <p>运动超时时间：<input type="number" id="dometout"  x-bind:value="dome.tout" x-model="dome.tout"/> 秒</p>
         </div>
         <div>
-          <p class="pt-2">Abilita chiusura in caso di mancata connessione: <input type="checkbox" id="dome.enautoclose" class="bg-gray-100 p-2 text-gray-500" x-bind:value="dome.enautoclose" x-model="dome.enautoclose"/> </p>
-          <p class="text-xs italic">In caso di mancate richieste da parte dei driver ascom o portale web, lo shutter si chiude automaticamente dopo un tot tempo.</p>
-        <p>Tempo di inattività: <input type="number" id="domeautoclose"  x-bind:value="dome.autoclose" x-model="dome.autoclose"/> Min.</p>
+          <p class="pt-2">无连接时自动关闭：<input type="checkbox" id="dome.enautoclose" class="bg-gray-100 p-2 text-gray-500" x-bind:value="dome.enautoclose" x-model="dome.enautoclose"/> </p>
+          <p class="text-xs italic">如果 ASCOM 驱动或网页长时间没有请求，顶棚会在设定时间后自动关闭。</p>
+        <p>无通信等待时间：<input type="number" id="domeautoclose"  x-bind:value="dome.autoclose" x-model="dome.autoclose"/> 分钟</p>
         </div>
         <div class="pt-2">
-            <button @click="saveDomeSetting()" class="button button_green">Salva</button>
-            <a href="/domeconfig.txt" download class="button button_green">Scarica Configurazione</a>
+            <button @click="saveDomeSetting()" class="button button_green">保存</button>
+            <a href="/domeconfig.txt" download class="button button_green">下载配置</a>
         </div>
 
       </div>
@@ -92,14 +92,14 @@
 
       <div class="tab-content" x-show="open" x-transition>
         <div>
-          <p>Remote port is usually 32227! if you changed from Ascom software, you know the port you need!<br> Alpaca port is the port from the request will arrived and sended from this borad to the remote port.<br>Change this setting only if you really need it.<br></p>
-          <p>Remote Port: <input type="number" id="ascomremotePort"  x-model="board.alpRemPort"/></p>
-          <p>Alpaca Port: <input type="number" id="ascomboardPort"  x-model="board.alpPort"/></p>
+          <p>远程端口通常为 32227。如果你在 ASCOM 软件中修改过端口，请填写对应端口。<br>Alpaca 端口是本控制板接收请求并转发到远程端口时使用的端口。<br>仅在确有需要时修改此设置。<br></p>
+          <p>远程端口：<input type="number" id="ascomremotePort"  x-model="board.alpRemPort"/></p>
+          <p>Alpaca 端口：<input type="number" id="ascomboardPort"  x-model="board.alpPort"/></p>
       </div>
 
         <div class="pt-2">
-            <button @click="saveBoardSetting()" class="button button_green">Salva</button>
-            <a href="/config.txt" download class="button button_green">Scarica Configurazione</a>
+            <button @click="saveBoardSetting()" class="button button_green">保存</button>
+            <a href="/config.txt" download class="button button_green">下载配置</a>
         </div>
 
       </div>
@@ -109,8 +109,8 @@
     <template x-if="relodRequest">
       <div class="fixed top-0 left-0 h-full w-full backdrop-blur-sm flex align-middle items-center">
         <div class="flex flex-col h-1/4 w-full lg:w-1/4 mx-auto justify-center items-center  rounded-md bg-white text-black">
-          <p>Riavvio della scheda in corso</p>
-          <p>Ricaricare la pagina tra 10 sec</p>
+          <p>控制板正在重启</p>
+          <p>请在 10 秒后刷新页面</p>
         </div>
       </div>
     </template>
@@ -189,9 +189,9 @@
         validatePinNumber(event){
             let ionumber = parseInt(event.target.value);
             if (this.unusablePinForInput.includes(ionumber)){
-              this.addToast({type:"error", text:"PIN " + ionumber + " UNUSABLE"})
+              this.addToast({type:"error", text:"引脚 " + ionumber + " 不可用"})
             } else if (this.unusablePinForOutput.includes(ionumber)){
-              this.addToast({type:"info", text:"The pin: " + ionumber + " cannot be used as output (warning)"})
+              this.addToast({type:"info", text:"引脚 " + ionumber + " 不能作为输出使用（提示）"})
             }
         },
         
@@ -203,19 +203,19 @@
             this.dome.pinclose = parseInt(this.dome.pinclose);
             this.dome.pinopen = parseInt(this.dome.pinopen);
             if(this.unusablePinForInput.includes(this.dome.pinopen)){
-              this.addToast({type:"error", text:"Dome Validation Error, PIN " + this.dome.pinopen + "cannot be used as input"});
+              this.addToast({type:"error", text:"平移顶配置错误：引脚 " + this.dome.pinopen + " 不能作为输入使用"});
               return;
             }
             if(this.unusablePinForInput.includes(this.dome.pinclose)){
-              this.addToast({type:"error", text:"Dome Validation Error, PIN " + this.dome.pinclose + " cannot be used as input"});
+              this.addToast({type:"error", text:"平移顶配置错误：引脚 " + this.dome.pinclose + " 不能作为输入使用"});
               return;
             }
             if(this.unusablePinForOutput.includes(this.dome.pinstart)){
-              this.addToast({type:"error", text:"Dome Validation Error, PIN " + this.dome.pinstart + " cannot be used as output"});
+              this.addToast({type:"error", text:"平移顶配置错误：引脚 " + this.dome.pinstart + " 不能作为输出使用"});
               return;
             }
             if(this.unusablePinForOutput.includes(this.dome.pinhalt)){
-              this.addToast({type:"error", text:"Dome Validation Error, PIN " + this.dome.pinhalt + " cannot be used as output"});
+              this.addToast({type:"error", text:"平移顶配置错误：引脚 " + this.dome.pinhalt + " 不能作为输出使用"});
               return;
             }
             fetch('/api/dome-saveconfig',{ 
@@ -224,7 +224,7 @@
               body: JSON.stringify(this.dome)
             })
             .then(response => response.json())
-            .then(response => { if (response.reboot){this.pageRefresh();} else { this.getDomeConfig();this.addToast({type:"success", text:"Dome Saved."})}});
+            .then(response => { if (response.reboot){this.pageRefresh();} else { this.getDomeConfig();this.addToast({type:"success", text:"平移顶配置已保存"})}});
         },
 
         saveBoardSetting(){
@@ -235,7 +235,7 @@
               body: JSON.stringify(this.board)
             })
             .then(response => response.json())
-            .then(response => { if (response.reboot){this.pageRefresh();} else this.addToast({type:"info", text:"Saved."})});
+            .then(response => { if (response.reboot){this.pageRefresh();} else this.addToast({type:"info", text:"已保存"})});
         },
 
 

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script defer src="/alpine.js" type="module"></script>
     <link rel="stylesheet" href="/style.css" />
-    <title>Home - KalecBoard</title>
+    <title>首页 - KalecBoard</title>
   </head>
   <body>
 <header x-data="{ open: false }" @resize.window="width = (window.innerWidth > 0) ? window.innerWidth : screen.width;if (width > 767) {open = false}">
@@ -19,8 +19,8 @@
 </div>
 <!-- Primary Navbar items -->
 <div class="hidden md:flex items-center space-x-1">
-  <a href="/" class="py-4 px-2 font-semibold text-green-800 transition duration-300">Home</a>
-  <a href="/setup" class="py-4 px-2 font-semibold hover:text-green-500 transition duration-300">Setup</a>
+  <a href="/" class="py-4 px-2 font-semibold text-green-800 transition duration-300">首页</a>
+  <a href="/setup" class="py-4 px-2 font-semibold hover:text-green-500 transition duration-300">设置</a>
 </div>
 <!-- Mobile menu button -->
 <div class="md:hidden flex items-center h-14" >
@@ -35,15 +35,15 @@
 <!-- mobile menu -->
 <div x-show="open" class="mobile-menu">
 <ul class="">
-  <li><a href="/" class="block text-sm px-2 py-4 bg-green-800 transition duration-300">Home</a></li>
-  <li><a href="/setup" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Setup</a></li>
+  <li><a href="/" class="block text-sm px-2 py-4 bg-green-800 transition duration-300">首页</a></li>
+  <li><a href="/setup" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">设置</a></li>
 </ul>
 </div>
 </nav>
 </header>
 
     <div class="">
-      <h1 class="text-center text-xl">Kalecgos Dome</h1>
+      <h1 class="text-center text-xl">Kalecgos 平移顶</h1>
       
     </div>
 
@@ -57,35 +57,35 @@
       >
 
       <div class="tab-header" >
-        <div class="grow"><b>Dome</b></div>
+        <div class="grow"><b>平移顶</b></div>
         <div><button @click="open = ! open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="#fff" fill="#fff"><path d="M12 3v2h5.586L5 17.586V12H3v9h9v-2H6.414L19 6.414V12h2V3h-9z"/></svg></button></div>
       </div>
 
       <div class="tab-content" x-show="open" x-transition>
 
-        <p class="flex text-xl pt-6 pr-2">Roof State: 
-          <template x-if="dome.actualState === 0"><b>Open</b></template>
-          <template x-if="dome.actualState === 1"><b>Close</b></template>
-          <template x-if="dome.actualState === 2"><b>Opening</b></template>
-          <template x-if="dome.actualState === 3"><b>Closing</b></template>
-          <template x-if="dome.actualState === 4"><b>Error</b></template>
+        <p class="flex text-xl pt-6 pr-2">顶棚状态：
+          <template x-if="dome.actualState === 0"><b>已打开</b></template>
+          <template x-if="dome.actualState === 1"><b>已关闭</b></template>
+          <template x-if="dome.actualState === 2"><b>打开中</b></template>
+          <template x-if="dome.actualState === 3"><b>关闭中</b></template>
+          <template x-if="dome.actualState === 4"><b>错误</b></template>
         </p>
-        <div class="flex text-xl">Last Command: 
-          <template x-if="dome.lastCommand === 0"><b>Idle</b></template>
-          <template x-if="dome.lastCommand === 1"><b>Opening</b></template>
-          <template x-if="dome.lastCommand === 2"><b>Closing</b></template>
-          <template x-if="dome.lastCommand === 3"><b>HALT</b></template>
+        <div class="flex text-xl">上次命令：
+          <template x-if="dome.lastCommand === 0"><b>空闲</b></template>
+          <template x-if="dome.lastCommand === 1"><b>打开中</b></template>
+          <template x-if="dome.lastCommand === 2"><b>关闭中</b></template>
+          <template x-if="dome.lastCommand === 3"><b>停止</b></template>
         </div>
         <div class="grid grid-flow-row grid-rows-3 mx-auto gap-10 pt-6">
-            <button @click="shutterCmd(1)" class="px-12 py-2 bg-green-600 w-full" >Apri</button>
-            <button @click="shutterCmd(2)" class="px-12 py-2 bg-red-600 w-full">Chiudi</button>
-            <button @click="shutterCmd(3)" class="text-black font-bold px-12 py-2 bg-yellow-300 w-full">HALT</button>
+            <button @click="shutterCmd(1)" class="px-12 py-2 bg-green-600 w-full" >打开</button>
+            <button @click="shutterCmd(2)" class="px-12 py-2 bg-red-600 w-full">关闭</button>
+            <button @click="shutterCmd(3)" class="text-black font-bold px-12 py-2 bg-yellow-300 w-full">停止</button>
         </div>
         <template x-if="dome.error == 1">
-          <div class="message message-ok">Command Send Succesfully!!</div>
+          <div class="message message-ok">命令已发送</div>
         </template>
         <template x-if="dome.error > 1">
-          <div class="message message-ko">Errore</div>
+          <div class="message message-ko">发生错误</div>
         </template>
 
       </div>
@@ -99,17 +99,17 @@
       >
 
       <div class="tab-header" >
-        <div class="grow">Statistics</div>
+        <div class="grow">统计信息</div>
         <div><button @click="open = ! open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="#fff" fill="#fff"><path d="M12 3v2h5.586L5 17.586V12H3v9h9v-2H6.414L19 6.414V12h2V3h-9z"/></svg></button></div>
       </div>
 
       <div class="tab-content" x-show="open" x-transition>
 
         <div class="flex flex-col pt-6">
-          <p>ESP32 is running since: <span x-text="upTime"></span></p>
-          <p>Last WiFi connection since: <span x-text="upTimeWiFi"></span></p>
-          <p>Free Heap Size: <span x-text="freeHeap"></span><span>%</span></p>
-          <p>min Free Heap Size: <span x-text="minFreeHeap"></span><span>%</span></p>
+          <p>ESP32 已运行：<span x-text="upTime"></span></p>
+          <p>WiFi 已连接：<span x-text="upTimeWiFi"></span></p>
+          <p>可用堆内存：<span x-text="freeHeap"></span><span>%</span></p>
+          <p>最低可用堆内存：<span x-text="minFreeHeap"></span><span>%</span></p>
         </div>
 
 
@@ -197,18 +197,14 @@
 
         toHoursAndMinutes(minutes) {
           if (minutes < 0) {
-              return "Please enter a positive value.";
+              return "请输入正数。";
           }
 
           const days = Math.floor(minutes / (24 * 60));
           const hours = Math.floor((minutes % (24 * 60)) / 60);
           const remainingMinutes = minutes % 60;
 
-          const daysString = days === 1 ? "day" : "days";
-          const hoursString = hours === 1 ? "hour" : "hours";
-          const minutesString = remainingMinutes === 1 ? "minute" : "minutes";
-
-          return `${days} ${daysString}, ${hours} ${hoursString}, ${remainingMinutes} ${minutesString}`;
+          return `${days} 天, ${hours} 小时, ${remainingMinutes} 分钟`;
         }
 
         
