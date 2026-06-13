@@ -18,6 +18,7 @@ Only in this case comment the #define GATE_BOARD
 #include <ESPAsyncWiFiManager.h>
 #include <stdint.h>
 #include "SPIFFS.h"
+#include "board_pins.h"
 #include "Dome/domeVariable.h"
 #include "header.h"
 #include <ElegantOTA.h>

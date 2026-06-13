@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="912" height="879" viewBox="0 0 912 879">
+<rect width="100%" height="100%" fill="#101216"/>
+<rect x="60" y="60" width="792" height="759" fill="#181c22" stroke="#d336d3" stroke-width="2"/>
+<g fill="none" stroke-linecap="round" font-family="Arial">
+<circle cx="111.968" cy="111.968" r="39.6" stroke="#64ffda" stroke-width="1.5" stroke-dasharray="6 5"/>
+<circle cx="111.968" cy="111.968" r="14.768" stroke="#f4f4f5" stroke-width="3"/>
+<circle cx="800.032" cy="111.968" r="39.6" stroke="#64ffda" stroke-width="1.5" stroke-dasharray="6 5"/>
+<circle cx="800.032" cy="111.968" r="14.768" stroke="#f4f4f5" stroke-width="3"/>
+<circle cx="111.968" cy="767.032" r="39.6" stroke="#64ffda" stroke-width="1.5" stroke-dasharray="6 5"/>
+<circle cx="111.968" cy="767.032" r="14.768" stroke="#f4f4f5" stroke-width="3"/>
+<circle cx="800.032" cy="767.032" r="39.6" stroke="#64ffda" stroke-width="1.5" stroke-dasharray="6 5"/>
+<circle cx="800.032" cy="767.032" r="14.768" stroke="#f4f4f5" stroke-width="3"/>
+<text x="111.968" y="170" text-anchor="middle" fill="#64ffda" font-size="13">M3 keepout</text>
+</g>
+<text x="456" y="39" text-anchor="middle" fill="#f4f4f5" font-size="18" font-family="Arial">limit inputs / rain / RS485 reserve edge</text>
+<text x="456" y="849" text-anchor="middle" fill="#f4f4f5" font-size="18" font-family="Arial">5V input + USB-C outward edge</text>
+<text x="746" y="196" text-anchor="middle" fill="#f4f4f5" font-size="16" font-family="Arial">relay outputs</text>
+<g transform="translate(203 91.884)"><rect x="-47.5" y="-35" width="95" height="70" rx="5" fill="#ffd166" stroke="#111" stroke-width="1.5"/><text y="5" text-anchor="middle" fill="#111" font-size="18" font-family="Arial" font-weight="700">J6</text></g>
+<g transform="translate(308.6 91.884)"><rect x="-47.5" y="-35" width="95" height="70" rx="5" fill="#ffd166" stroke="#111" stroke-width="1.5"/><text y="5" text-anchor="middle" fill="#111" font-size="18" font-family="Arial" font-weight="700">J7</text></g>
+<g transform="translate(414.2 91.884)"><rect x="-47.5" y="-35" width="95" height="70" rx="5" fill="#ffd166" stroke="#111" stroke-width="1.5"/><text y="5" text-anchor="middle" fill="#111" font-size="18" font-family="Arial" font-weight="700">J8</text></g>
+<g transform="translate(692.28 91.884)"><rect x="-47.5" y="-35" width="95" height="70" rx="5" fill="#ffd166" stroke="#111" stroke-width="1.5"/><text y="5" text-anchor="middle" fill="#111" font-size="18" font-family="Arial" font-weight="700">J5</text></g>
+<g transform="translate(826.7 250.507)"><rect x="-47.5" y="-35" width="95" height="70" rx="5" fill="#ffd166" stroke="#111" stroke-width="1.5"/><text y="5" text-anchor="middle" fill="#111" font-size="18" font-family="Arial" font-weight="700">J2</text></g>
+<g transform="translate(826.7 380.439)"><rect x="-47.5" y="-35" width="95" height="70" rx="5" fill="#ffd166" stroke="#111" stroke-width="1.5"/><text y="5" text-anchor="middle" fill="#111" font-size="18" font-family="Arial" font-weight="700">J3</text></g>
+<g transform="translate(826.7 510.349)"><rect x="-47.5" y="-35" width="95" height="70" rx="5" fill="#ffd166" stroke="#111" stroke-width="1.5"/><text y="5" text-anchor="middle" fill="#111" font-size="18" font-family="Arial" font-weight="700">J4</text></g>
+<g transform="translate(218.4 790.087)"><rect x="-47.5" y="-35" width="95" height="70" rx="5" fill="#ffd166" stroke="#111" stroke-width="1.5"/><text y="5" text-anchor="middle" fill="#111" font-size="18" font-family="Arial" font-weight="700">J1</text></g>
+<g transform="translate(371.806 781.661)"><rect x="-47.5" y="-40" width="95" height="80" rx="5" fill="#ffd166" stroke="#111" stroke-width="1.5"/><text y="5" text-anchor="middle" fill="#111" font-size="18" font-family="Arial" font-weight="700">J9</text></g>
+<g transform="translate(302.528 484.225)"><rect x="-85" y="-67.5" width="170" height="135" rx="5" fill="#8ecae6" stroke="#111" stroke-width="1.5"/><text y="5" text-anchor="middle" fill="#111" font-size="18" font-family="Arial" font-weight="700">U1</text></g>
+<g transform="translate(562.37 152.4)"><rect x="-40" y="-35" width="80" height="70" rx="5" fill="#8ecae6" stroke="#111" stroke-width="1.5"/><text y="5" text-anchor="middle" fill="#111" font-size="18" font-family="Arial" font-weight="700">U2</text></g>
+<g transform="translate(233.228 676)"><rect x="-40" y="-35" width="80" height="70" rx="5" fill="#8ecae6" stroke="#111" stroke-width="1.5"/><text y="5" text-anchor="middle" fill="#111" font-size="18" font-family="Arial" font-weight="700">U3</text></g>
+<g transform="translate(631.648 250.507)"><rect x="-65" y="-82.5" width="130" height="165" rx="5" fill="#cdb4db" stroke="#111" stroke-width="1.5"/><text y="5" text-anchor="middle" fill="#111" font-size="18" font-family="Arial" font-weight="700">K1</text></g>
+<g transform="translate(631.648 380.439)"><rect x="-65" y="-82.5" width="130" height="165" rx="5" fill="#cdb4db" stroke="#111" stroke-width="1.5"/><text y="5" text-anchor="middle" fill="#111" font-size="18" font-family="Arial" font-weight="700">K2</text></g>
+<g transform="translate(631.648 510.349)"><rect x="-65" y="-82.5" width="130" height="165" rx="5" fill="#cdb4db" stroke="#111" stroke-width="1.5"/><text y="5" text-anchor="middle" fill="#111" font-size="18" font-family="Arial" font-weight="700">K3</text></g>
+<rect x="94.646" y="244.022" width="415.747" height="145.946" fill="none" stroke="#64ffda" stroke-dasharray="7 5" stroke-width="2"/>
+<text x="302" y="319" text-anchor="middle" fill="#64ffda" font-size="15" font-family="Arial">ESP32 antenna keepout</text>
+</svg>

@@ -1,6 +1,6 @@
 # Ascom Alpaca ESP32 Dome Board
 
-ESP32 firmware for controlling a roll-off-roof / sliding dome top through the ASCOM Alpaca protocol.
+ESP32-S3 firmware for controlling a roll-off-roof / sliding dome top through the ASCOM Alpaca protocol.
 
 This trimmed version keeps only the Dome control path:
 
@@ -12,19 +12,26 @@ This trimmed version keeps only the Dome control path:
 
 Switch and CoverCalibrator modules have been removed from the firmware, web UI, SPIFFS defaults, and Alpaca device discovery.
 
-## Dome I/O
+## ESP32-S3 Dome I/O
 
-The current firmware uses fixed GPIO definitions in `src/Dome/dome.h`:
+The current firmware uses fixed GPIO definitions in `src/board_pins.h`:
 
 | Signal | GPIO |
 | --- | --- |
-| Open command relay | 25 |
-| Close command relay | 26 |
-| Halt command relay | 32 |
-| Open limit input | 35 |
-| Close limit input | 34 |
+| Open command relay trigger | 4 |
+| Close command relay trigger | 5 |
+| Stop / halt command relay trigger | 6 |
+| Open limit input | 7 |
+| Close limit input | 8 |
+| Reserved rain sensor input | 9 |
+
+The three relay outputs are intended to pulse external isolated trigger inputs for open, close, and stop. The rain sensor header is initialized as an input and reported in diagnostics, but it does not automatically close the dome until the sensor polarity and desired safety behavior are defined.
 
 The web setup page still stores the original dome configuration file for compatibility, but the active control pins are the fixed GPIO constants above.
+
+Detailed hardware notes are in `docs/esp32-s3-dome-board-hardware.md`.
+
+![ESP32-S3 dome board wiring draft](docs/esp32-s3-dome-board-wiring.svg)
 
 ## Build
 

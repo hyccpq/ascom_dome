@@ -1,0 +1,17 @@
+Designator,Qty,Value,Package/Footprint Plan,LCSC Part,Fit,Cost Note
+U1,1,ESP32-S3-WROOM-1-N8R8,Castellated module,C2913201,FIT,Use module to avoid RF layout and certification risk
+U3,1,AMS1117-3.3,SOT-223,C6186,FIT,Cheap for first 5V input version; consider buck only if heat is high
+U2,1,SP3485EN-L/TR,SOIC-8,C8963,DNP by default,Reserve RS485; do not fit if switch-output mode is enough
+K1 K2 K3,3,SRD-05VDC-SL-C,Songle SRD relay footprint,C35449,FIT,Lowest-risk field wiring; only COM/NO routed to reduce terminal cost
+Q1 Q2 Q3,3,AO3400A,SOT-23,C20917,FIT,Low-cost relay coil drivers
+D1 D2 D3,3,1N4148W,SOD-123,C81598,FIT,Relay flyback diodes
+R1 R2 R3,3,100R,0603,C22775,FIT,MOSFET gate resistors; JLC Basic part
+R4 R5 R6,3,10k,0603,C25804,FIT,Input pullups; JLC Basic part
+R8,1,120R,0603,C22787,DNP by default,RS485 terminal resistor; JLC Basic part
+R9 R10,2,5.1k,0603,C23186,FIT,USB-C CC pulldowns; JLC Basic part
+J1,1,2P 5.08mm terminal,5.08mm,C8465,FIT,External GND/+5V input; cheaper than adding onboard 12/24V buck in V1
+J2 J3 J4,3,2P 5.08mm terminal,5.08mm,C8465,FIT,Relay dry-contact outputs OPEN/CLOSE/STOP
+J5,1,2P 3.81mm terminal,3.81mm,C9900005589,DNP by default,RS485 A/B reserved
+J6 J7 J8,3,2P 3.81mm terminal,3.81mm,C9900005589,FIT,OPEN limit/CLOSE limit/RAIN input
+J9,1,USB-C receptacle,HRO TYPE-C-31-M-12,C165948,FIT,Native ESP32-S3 USB; no USB-UART chip needed
+MH1 MH2 MH3 MH4,4,M3 NPTH,3.4mm drill,N/A,FIT,No plating required; low-cost mechanical mounting

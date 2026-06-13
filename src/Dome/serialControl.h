@@ -96,6 +96,8 @@ void domeSerialConfig() {
     Serial.print(PIN_OPEN);
     Serial.print(F(" CLOSE_INPUT="));
     Serial.print(PIN_CLOSE);
+    Serial.print(F(" RAIN_INPUT="));
+    Serial.print(PIN_RAIN_SENSOR);
     Serial.print(F(" TIMEOUT="));
     Serial.println(300);
 }

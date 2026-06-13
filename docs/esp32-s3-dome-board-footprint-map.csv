@@ -1,0 +1,17 @@
+Designator,Current Footprint,Replacement Footprint Target,Why,Fit
+U1,Codex:U1,LCSC C2913201 EasyEDA footprint WIRELM-SMD_ESP32-S3-WROOM-1 / footprintUuid bacdc9b3530d4b9ca5f35adac008b474,Use official module keepout and pad geometry; antenna side must face board edge and remain copper/component free,FIT
+U3,Codex:U3,LCSC C6186 EasyEDA footprint SOT-223-3_L6.5-W3.4-P2.30-LS7.0-BR / footprintUuid 20c29e37a9b84b4197418483096f9c05,AMS1117-3.3 footprint,FIT
+U2,Codex:U2,LCSC C8963 EasyEDA footprint SOIC-8_L5.0-W4.0-P1.27-LS6.0-BL / footprintUuid f7d15c2fdb6442c7924d73bb1cadcb47,SP3485 SOIC-8 package,DNP by default
+K1 K2 K3,Codex:K1/K2/K3,LCSC C35449 EasyEDA footprint RELAY-TH_SRD-XXVDC-XL-C / footprintUuid e091fe638fa34354809b87cd801cad53,Must match purchased relay pinout,FIT
+Q1 Q2 Q3,Codex:Q1/Q2/Q3,LCSC C20917 EasyEDA footprint SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR / footprintUuid bdad16194d454cb292a50525f39c3ffd,AO3400A footprint,FIT
+D1 D2 D3,Codex:D1/D2/D3,LCSC C81598 EasyEDA footprint SOD-123F_L2.7-W1.6-LS3.8-RD / footprintUuid 9037e46ec88e4daaac06215d79f5d775,Low-cost assembly-friendly flyback diode footprint,FIT
+R1 R2 R3,Codex:R1/R2/R3,LCSC C22775 EasyEDA footprint R0603 / footprintUuid 50b4943912284dab97752312e589e9e2,JLC Basic 0603 resistor,FIT
+R4 R5 R6,Codex:R4/R5/R6,LCSC C25804 EasyEDA footprint R0603 / footprintUuid 50b4943912284dab97752312e589e9e2,JLC Basic 0603 resistor,FIT
+R8,Codex:R8,LCSC C22787 EasyEDA footprint R0603 / footprintUuid 50b4943912284dab97752312e589e9e2,JLC Basic 0603 resistor; keep DNP for RS485 endpoint option,DNP by default
+R9 R10,Codex:R9/R10,LCSC C23186 EasyEDA footprint R0603 / footprintUuid 50b4943912284dab97752312e589e9e2,JLC Basic 0603 resistor,FIT
+J1,Codex:J1,LCSC C8465 EasyEDA footprint CONN-TH_2P-P5.00_WJ500V-5.08-2P / footprintUuid 8968bbc397b14e199797e74eee3df70d,5.08mm 2P 5V input terminal,FIT
+J2 J3 J4,Codex:J2/J3/J4,LCSC C8465 EasyEDA footprint CONN-TH_2P-P5.00_WJ500V-5.08-2P / footprintUuid 8968bbc397b14e199797e74eee3df70d,5.08mm 2P relay dry-contact terminals,FIT
+J5,Codex:J5,LCSC C9900005589 EasyEDA footprint CONN-TH_P3.81_KF128L-3.81-2P-1 / footprintUuid 487be35cd79947a0b5f4b62e4888dd6b,3.81mm 2P RS485 A/B reserved terminal,DNP by default
+J6 J7 J8,Codex:J6/J7/J8,LCSC C9900005589 EasyEDA footprint CONN-TH_P3.81_KF128L-3.81-2P-1 / footprintUuid 487be35cd79947a0b5f4b62e4888dd6b,3.81mm 2P limit/rain low-voltage inputs,FIT
+J9,Codex:J9,LCSC C165948 EasyEDA footprint USB-C_SMD-TYPE-C-31-M-12_1 / footprintUuid 6be549a13f5d4c07a7d9efa614d32ed9,Low-cost USB-C device port; verify shell/locator holes,FIT
+MH1 MH2 MH3 MH4,Codex:MH1/MH2/MH3/MH4,MountingHole:MountingHole_3.2mm_M3_DIN965 or NPTH 3.4mm custom,Four corner M3 mounting holes,FIT

@@ -1,0 +1,112 @@
+** Drc report for esp32_s3_dome_controller.kicad_pcb **
+** Created on 2026-05-29T01:00:17+0800 **
+
+** Found 34 DRC violations **
+[lib_footprint_mismatch]: Footprint 'MH1' does not match copy in library 'Codex'.
+    Local override; warning
+    @(6.0000 mm, 6.0000 mm): Footprint MH1
+[lib_footprint_mismatch]: Footprint 'MH2' does not match copy in library 'Codex'.
+    Local override; warning
+    @(85.4400 mm, 6.0000 mm): Footprint MH2
+[lib_footprint_mismatch]: Footprint 'MH3' does not match copy in library 'Codex'.
+    Local override; warning
+    @(6.0000 mm, 81.6300 mm): Footprint MH3
+[lib_footprint_mismatch]: Footprint 'MH4' does not match copy in library 'Codex'.
+    Local override; warning
+    @(85.4400 mm, 81.6300 mm): Footprint MH4
+[lib_footprint_mismatch]: Footprint 'J2' does not match copy in library 'Codex'.
+    Local override; warning
+    @(86.0000 mm, 22.0000 mm): Footprint J2
+[lib_footprint_mismatch]: Footprint 'J3' does not match copy in library 'Codex'.
+    Local override; warning
+    @(86.0000 mm, 37.0000 mm): Footprint J3
+[lib_footprint_mismatch]: Footprint 'J4' does not match copy in library 'Codex'.
+    Local override; warning
+    @(86.0000 mm, 52.0000 mm): Footprint J4
+[lib_footprint_mismatch]: Footprint 'J1' does not match copy in library 'Codex'.
+    Local override; warning
+    @(9.0000 mm, 76.0000 mm): Footprint J1
+[lib_footprint_mismatch]: Footprint 'J9' does not match copy in library 'Codex'.
+    Local override; warning
+    @(36.0000 mm, 82.0000 mm): Footprint J9
+[lib_footprint_mismatch]: Footprint 'J6' does not match copy in library 'Codex'.
+    Local override; warning
+    @(10.0000 mm, 13.0000 mm): Footprint J6
+[lib_footprint_mismatch]: Footprint 'J7' does not match copy in library 'Codex'.
+    Local override; warning
+    @(25.0000 mm, 13.0000 mm): Footprint J7
+[lib_footprint_mismatch]: Footprint 'J8' does not match copy in library 'Codex'.
+    Local override; warning
+    @(40.0000 mm, 13.0000 mm): Footprint J8
+[lib_footprint_mismatch]: Footprint 'J5' does not match copy in library 'Codex'.
+    Local override; warning
+    @(73.0000 mm, 13.0000 mm): Footprint J5
+[lib_footprint_mismatch]: Footprint 'U1' does not match copy in library 'Codex'.
+    Local override; warning
+    @(28.0000 mm, 49.0000 mm): Footprint U1
+[lib_footprint_mismatch]: Footprint 'U3' does not match copy in library 'Codex'.
+    Local override; warning
+    @(20.0000 mm, 76.0000 mm): Footprint U3
+[lib_footprint_mismatch]: Footprint 'U2' does not match copy in library 'Codex'.
+    Local override; warning
+    @(58.0000 mm, 18.0000 mm): Footprint U2
+[lib_footprint_mismatch]: Footprint 'K1' does not match copy in library 'Codex'.
+    Local override; warning
+    @(66.0000 mm, 22.0000 mm): Footprint K1
+[lib_footprint_mismatch]: Footprint 'Q1' does not match copy in library 'Codex'.
+    Local override; warning
+    @(48.0000 mm, 26.0000 mm): Footprint Q1
+[lib_footprint_mismatch]: Footprint 'R1' does not match copy in library 'Codex'.
+    Local override; warning
+    @(42.0000 mm, 24.0000 mm): Footprint R1
+[lib_footprint_mismatch]: Footprint 'D1' does not match copy in library 'Codex'.
+    Local override; warning
+    @(56.0000 mm, 22.0000 mm): Footprint D1
+[lib_footprint_mismatch]: Footprint 'K2' does not match copy in library 'Codex'.
+    Local override; warning
+    @(66.0000 mm, 37.0000 mm): Footprint K2
+[lib_footprint_mismatch]: Footprint 'Q2' does not match copy in library 'Codex'.
+    Local override; warning
+    @(48.0000 mm, 41.0000 mm): Footprint Q2
+[lib_footprint_mismatch]: Footprint 'R2' does not match copy in library 'Codex'.
+    Local override; warning
+    @(42.0000 mm, 39.0000 mm): Footprint R2
+[lib_footprint_mismatch]: Footprint 'D2' does not match copy in library 'Codex'.
+    Local override; warning
+    @(56.0000 mm, 37.0000 mm): Footprint D2
+[lib_footprint_mismatch]: Footprint 'K3' does not match copy in library 'Codex'.
+    Local override; warning
+    @(66.0000 mm, 52.0000 mm): Footprint K3
+[lib_footprint_mismatch]: Footprint 'Q3' does not match copy in library 'Codex'.
+    Local override; warning
+    @(48.0000 mm, 56.0000 mm): Footprint Q3
+[lib_footprint_mismatch]: Footprint 'R3' does not match copy in library 'Codex'.
+    Local override; warning
+    @(42.0000 mm, 54.0000 mm): Footprint R3
+[lib_footprint_mismatch]: Footprint 'D3' does not match copy in library 'Codex'.
+    Local override; warning
+    @(56.0000 mm, 52.0000 mm): Footprint D3
+[lib_footprint_mismatch]: Footprint 'R4' does not match copy in library 'Codex'.
+    Local override; warning
+    @(14.0000 mm, 22.0000 mm): Footprint R4
+[lib_footprint_mismatch]: Footprint 'R5' does not match copy in library 'Codex'.
+    Local override; warning
+    @(29.0000 mm, 22.0000 mm): Footprint R5
+[lib_footprint_mismatch]: Footprint 'R6' does not match copy in library 'Codex'.
+    Local override; warning
+    @(44.0000 mm, 22.0000 mm): Footprint R6
+[lib_footprint_mismatch]: Footprint 'R8' does not match copy in library 'Codex'.
+    Local override; warning
+    @(73.0000 mm, 22.0000 mm): Footprint R8
+[lib_footprint_mismatch]: Footprint 'R9' does not match copy in library 'Codex'.
+    Local override; warning
+    @(45.0000 mm, 80.0000 mm): Footprint R9
+[lib_footprint_mismatch]: Footprint 'R10' does not match copy in library 'Codex'.
+    Local override; warning
+    @(45.0000 mm, 84.0000 mm): Footprint R10
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **

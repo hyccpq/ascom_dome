@@ -8,12 +8,16 @@ void domeWebServer(){
         AsyncResponseStream *response = request->beginResponseStream("application/json");
         response->print("{\"dome\":{ \"pinstart\":");
         response->print(Config.dome.pinStart);
+        response->print(",\"pinclosestart\":");
+        response->print(Config.dome.pinCloseStart);
         response->print(",\"pinhalt\":");
         response->print(Config.dome.pinHalt);
         response->print(",\"pinopen\":");
         response->print(Config.dome.pinOpen);
         response->print(",\"pinclose\":");
         response->print(Config.dome.pinClose);
+        response->print(",\"pinrain\":");
+        response->print(Config.dome.pinRainSensor);
         response->print(",\"tout\":");
         response->print(Config.dome.movingTimeOut);
         response->print(",\"enautoclose\":");
@@ -28,26 +32,18 @@ void domeWebServer(){
     AsyncCallbackJsonWebHandler *domecfg = new AsyncCallbackJsonWebHandler("/api/dome-saveconfig", [](AsyncWebServerRequest * request, JsonVariant & json) {
         JsonDocument doc;
         doc = json.as<JsonObject>();
-        bool reboot = false;
-        if (Config.dome.pinStart != doc["pinstart"]) {reboot=true;}
-        Config.dome.pinStart = doc["pinstart"];
-        if (Config.dome.pinHalt != doc["pinhalt"]) {reboot=true;}
-        Config.dome.pinHalt = doc["pinhalt"];
-        if (Config.dome.pinOpen != doc["pinopen"]) {reboot=true;}
-        Config.dome.pinOpen = doc["pinopen"];
-        if (Config.dome.pinClose != doc["pinclose"]) {reboot=true;}
-        Config.dome.pinClose = doc["pinclose"];
+        Config.dome.pinStart = PIN_OPEN_START;
+        Config.dome.pinCloseStart = PIN_CLOSE_START;
+        Config.dome.pinHalt = PIN_HALT_START;
+        Config.dome.pinOpen = PIN_OPEN;
+        Config.dome.pinClose = PIN_CLOSE;
+        Config.dome.pinRainSensor = PIN_RAIN_SENSOR;
         
         Config.dome.movingTimeOut = doc["tout"];
         Config.dome.enAutoClose = doc["enautoclose"];
         Config.dome.autoCloseTimeOut = doc["autoclose"];
         Config.save.dome.execute = true;
-        if (reboot){
-            Config.save.dome.restartNeeded = true;
-            request->send(200, "application/json", "{\"reboot\": \"1\"}");
-        } else {
-            request->send(200, "application/json", "{\"accept\": \"ok\"}");
-        }
+        request->send(200, "application/json", "{\"accept\": \"ok\"}");
     });
 
     server.on("/api/dome-cmd",               HTTP_PUT, [](AsyncWebServerRequest *request) {

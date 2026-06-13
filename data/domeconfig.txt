@@ -1,1 +1,1 @@
-{"pinstart":33,"pinhalt":32,"pinopen":34,"pinclose":35,"tout":20,"enautoclose":false,"autoclose":10}
+{"pinstart":4,"pinclosestart":5,"pinhalt":6,"pinopen":7,"pinclose":8,"pinrain":9,"tout":20,"enautoclose":false,"autoclose":10}

@@ -1,0 +1,4 @@
+Comment,Designator,Footprint,LCSC Part #,JLCPCB Class
+SP3485EN-L/TR,U2,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,C8963,Basic
+120R,R8,Resistor_SMD:R_0603_1608Metric,C22787,Basic
+3.81mm 2P terminal,J5,EasyEDA CONN-TH_P3.81_KF128L-3.81-2P-1,C9900005589,Extended

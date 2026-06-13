@@ -1,0 +1,17 @@
+Designator,Qty,Value,LCSC Part,MPN/Keyword,JLCPCB Class,Fit,Footprint Target,Notes
+U1,1,ESP32-S3-WROOM-1-N8R8,C2913201,ESP32-S3-WROOM-1-N8R8,Extended,FIT,EasyEDA WIRELM-SMD_ESP32-S3-WROOM-1,Use official module footprint and keep antenna keepout empty
+U3,1,AMS1117-3.3,C6186,AMS1117-3.3,Basic,FIT,EasyEDA SOT-223-3_L6.5-W3.4-P2.30-LS7.0-BR,Low-cost 5V-to-3V3 LDO for V1
+U2,1,SP3485EN-L/TR,C8963,SP3485 SOIC-8,Basic,DNP by default,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,RS485 reserve; fit only when RS485 is needed
+K1 K2 K3,3,SRD-05VDC-SL-C,C35449,SRD-05VDC-SL-C,Extended,FIT,Relay_THT matched Songle SRD footprint,Confirm purchased relay pinout before ordering
+Q1 Q2 Q3,3,AO3400A,C20917,AO3400A SOT-23,Basic,FIT,Package_TO_SOT_SMD:SOT-23,Relay low-side MOSFET drivers
+D1 D2 D3,3,1N4148W,C81598,1N4148W SOD-123,Basic,FIT,Diode_SMD:D_SOD-123,Flyback diode; cheaper/easier than oversized SS14 here
+R1 R2 R3,3,100R,C22775,0603 100R,Basic,FIT,Resistor_SMD:R_0603_1608Metric,Gate resistors
+R4 R5 R6,3,10k,C25804,0603 10k,Basic,FIT,Resistor_SMD:R_0603_1608Metric,Input pullups
+R8,1,120R,C22787,0603 120R,Basic,DNP by default,Resistor_SMD:R_0603_1608Metric,RS485 terminal resistor
+R9 R10,2,5.1k,C23186,0603 5.1k,Basic,FIT,Resistor_SMD:R_0603_1608Metric,USB-C CC pulldowns
+J1,1,5.08mm 2P terminal,C8465,WJ500V-5.08-2P,Extended,FIT,EasyEDA CONN-TH_2P-P5.00_WJ500V-5.08-2P,External GND/+5V input
+J2 J3 J4,3,5.08mm 2P terminal,C8465,WJ500V-5.08-2P,Extended,FIT,EasyEDA CONN-TH_2P-P5.00_WJ500V-5.08-2P,Relay dry-contact outputs
+J5,1,3.81mm 2P terminal,C9900005589,KF128-3.81-2P,Extended,DNP by default,EasyEDA CONN-TH_P3.81_KF128L-3.81-2P-1,RS485 A/B reserve terminal
+J6 J7 J8,3,3.81mm 2P terminal,C9900005589,KF128-3.81-2P,Extended,FIT,EasyEDA CONN-TH_P3.81_KF128L-3.81-2P-1,OPEN limit / CLOSE limit / RAIN inputs
+J9,1,USB-C receptacle,C165948,HRO TYPE-C-31-M-12,Extended,FIT,Connector_USB matching HRO TYPE-C-31-M-12,Verify shell pads and board-edge orientation in JLCEDA footprint
+MH1 MH2 MH3 MH4,4,M3 NPTH,N/A,M3 mechanical hole,N/A,FIT,NPTH 3.4mm drill,Board fabrication hole, not BOM assembly part

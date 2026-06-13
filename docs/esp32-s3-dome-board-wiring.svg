@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760">
+  <defs>
+    <style>
+      .bg { fill: #f7f7f2; }
+      .board { fill: #ffffff; stroke: #222; stroke-width: 2; }
+      .zone { fill: #eef4f8; stroke: #4b6f88; stroke-width: 1.5; }
+      .out { fill: #fff4e6; stroke: #a86216; stroke-width: 1.5; }
+      .in { fill: #eef7ed; stroke: #4f8a42; stroke-width: 1.5; }
+      .comm { fill: #f0edf8; stroke: #6a58a8; stroke-width: 1.5; }
+      .text { font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #1f1f1f; }
+      .title { font-size: 28px; font-weight: 700; }
+      .h { font-size: 18px; font-weight: 700; }
+      .t { font-size: 15px; }
+      .small { font-size: 13px; }
+      .pin { fill: #ffffff; stroke: #555; stroke-width: 1; }
+      .wire { fill: none; stroke: #333; stroke-width: 2; }
+      .wire2 { fill: none; stroke: #6a58a8; stroke-width: 2; stroke-dasharray: 7 5; }
+      .note { fill: #fff; stroke: #aaa; stroke-width: 1; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1280" height="760"/>
+  <text class="text title" x="60" y="58">ESP32-S3 平移顶控制板 V1 接线草图</text>
+  <text class="text t" x="60" y="86">主控制用三路继电器干接点，RS485 和雨感先预留；所有外部线尽量走接线柱。</text>
+
+  <rect class="board" x="380" y="120" width="500" height="530" rx="8"/>
+  <text class="text h" x="565" y="154">控制板 PCB</text>
+
+  <rect class="zone" x="430" y="185" width="190" height="150" rx="6"/>
+  <text class="text h" x="468" y="218">ESP32-S3</text>
+  <text class="text small" x="455" y="248">GPIO4 OPEN</text>
+  <text class="text small" x="455" y="272">GPIO5 CLOSE</text>
+  <text class="text small" x="455" y="296">GPIO6 STOP</text>
+  <text class="text small" x="455" y="320">GPIO7/8/9 输入</text>
+
+  <rect class="out" x="665" y="175" width="165" height="210" rx="6"/>
+  <text class="text h" x="708" y="208">继电器区</text>
+  <text class="text small" x="692" y="242">K1 开</text>
+  <text class="text small" x="692" y="270">K2 关</text>
+  <text class="text small" x="692" y="298">K3 停</text>
+  <text class="text small" x="692" y="334">线圈二极管</text>
+  <text class="text small" x="692" y="358">动作指示 LED</text>
+
+  <rect class="in" x="430" y="385" width="190" height="160" rx="6"/>
+  <text class="text h" x="475" y="418">输入保护</text>
+  <text class="text small" x="452" y="450">上拉/下拉</text>
+  <text class="text small" x="452" y="474">串阻 + RC 滤波</text>
+  <text class="text small" x="452" y="498">TVS/ESD 预留</text>
+  <text class="text small" x="452" y="522">可选光耦隔离</text>
+
+  <rect class="comm" x="665" y="430" width="165" height="120" rx="6"/>
+  <text class="text h" x="708" y="462">RS485 预留</text>
+  <text class="text small" x="692" y="494">MAX3485/SP3485</text>
+  <text class="text small" x="692" y="518">120R 跳帽</text>
+
+  <rect class="note" x="475" y="585" width="270" height="42" rx="5"/>
+  <text class="text small" x="500" y="611">VIN 12/24V -> 5V -> 3V3，板上留 USB/BOOT/RESET</text>
+
+  <rect class="out" x="930" y="170" width="250" height="230" rx="6"/>
+  <text class="text h" x="990" y="204">输出接线柱</text>
+  <text class="text t" x="965" y="242">J2  OPEN_COM / NO / NC</text>
+  <text class="text t" x="965" y="276">J3  CLOSE_COM / NO / NC</text>
+  <text class="text t" x="965" y="310">J4  STOP_COM / NO / NC</text>
+  <text class="text small" x="965" y="354">接外部门机按钮输入</text>
+  <text class="text small" x="965" y="376">本板不直接驱动电机</text>
+
+  <rect class="in" x="930" y="445" width="250" height="155" rx="6"/>
+  <text class="text h" x="992" y="478">输入接线柱</text>
+  <text class="text t" x="965" y="514">J5 限位/雨感/急停</text>
+  <text class="text t" x="965" y="546">J6 本地开/关/停按钮</text>
+  <text class="text t" x="965" y="578">J7 RS485 A/B/GND</text>
+
+  <rect class="comm" x="80" y="190" width="250" height="140" rx="6"/>
+  <text class="text h" x="145" y="224">外部门机控制器</text>
+  <text class="text t" x="115" y="262">开 / 关 / 停按钮输入</text>
+  <text class="text small" x="115" y="292">继电器触点只模拟按键</text>
+
+  <rect class="in" x="80" y="405" width="250" height="175" rx="6"/>
+  <text class="text h" x="144" y="439">现场传感器</text>
+  <text class="text t" x="115" y="478">开到位限位</text>
+  <text class="text t" x="115" y="510">关到位限位</text>
+  <text class="text t" x="115" y="542">雨感 / 急停 / 本地按钮</text>
+
+  <path class="wire" marker-end="url(#arrow)" d="M620 242 H665"/>
+  <path class="wire" marker-end="url(#arrow)" d="M620 270 H665"/>
+  <path class="wire" marker-end="url(#arrow)" d="M620 298 H665"/>
+  <path class="wire" marker-end="url(#arrow)" d="M830 245 H930"/>
+  <path class="wire" marker-end="url(#arrow)" d="M930 285 H330 V260 H380"/>
+  <path class="wire" marker-end="url(#arrow)" d="M330 260 H330"/>
+
+  <path class="wire" marker-end="url(#arrow)" d="M330 492 H430"/>
+  <path class="wire" marker-end="url(#arrow)" d="M620 465 H930"/>
+  <path class="wire2" marker-end="url(#arrow)" d="M830 490 H930"/>
+
+  <path class="wire" d="M330 260 H380"/>
+  <path class="wire" d="M880 275 H930"/>
+  <path class="wire" d="M880 510 H930"/>
+
+  <text class="text small" x="900" y="145">强烈建议端子靠板边、丝印朝外</text>
+  <text class="text small" x="60" y="705">V1 推荐：继电器输出 COM/NO 至少保留，空间允许改 COM/NO/NC；传感器端子带 GND 和 SENSOR_VCC；RS485 只预留不作为首版主控依赖。</text>
+</svg>

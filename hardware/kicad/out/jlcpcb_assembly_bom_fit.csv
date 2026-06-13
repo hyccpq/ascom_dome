@@ -1,0 +1,13 @@
+Comment,Designator,Footprint,LCSC Part #,JLCPCB Class
+ESP32-S3-WROOM-1-N8R8,U1,EasyEDA WIRELM-SMD_ESP32-S3-WROOM-1,C2913201,Extended
+AMS1117-3.3,U3,EasyEDA SOT-223-3_L6.5-W3.4-P2.30-LS7.0-BR,C6186,Basic
+SRD-05VDC-SL-C,"K1,K2,K3",Relay_THT matched Songle SRD footprint,C35449,Extended
+AO3400A,"Q1,Q2,Q3",Package_TO_SOT_SMD:SOT-23,C20917,Basic
+1N4148W,"D1,D2,D3",Diode_SMD:D_SOD-123,C81598,Basic
+100R,"R1,R2,R3",Resistor_SMD:R_0603_1608Metric,C22775,Basic
+10k,"R4,R5,R6",Resistor_SMD:R_0603_1608Metric,C25804,Basic
+5.1k,"R9,R10",Resistor_SMD:R_0603_1608Metric,C23186,Basic
+5.08mm 2P terminal,J1,TerminalBlock 1x02 P5.08mm,C8465,Extended
+5.08mm 2P terminal,"J2,J3,J4",TerminalBlock 1x02 P5.08mm,C8465,Extended
+3.81mm 2P terminal,"J6,J7,J8",EasyEDA CONN-TH_P3.81_KF128L-3.81-2P-1,C9900005589,Extended
+USB-C receptacle,J9,Connector_USB matching HRO TYPE-C-31-M-12,C165948,Extended

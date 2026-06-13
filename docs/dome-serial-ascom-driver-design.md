@@ -250,7 +250,7 @@ KDB1 CONFIG?
 Response:
 
 ```text
-OK OPEN_RELAY=25 CLOSE_RELAY=26 HALT_RELAY=32 OPEN_INPUT=35 CLOSE_INPUT=34 TIMEOUT=300
+OK OPEN_RELAY=4 CLOSE_RELAY=5 HALT_RELAY=6 OPEN_INPUT=7 CLOSE_INPUT=8 RAIN_INPUT=9 TIMEOUT=300
 ```
 
 Driver use:
@@ -319,7 +319,7 @@ Implemented command examples:
 < OK CMD=HALT
 
 > KDB1 CONFIG?
-< OK OPEN_RELAY=25 CLOSE_RELAY=26 HALT_RELAY=32 OPEN_INPUT=35 CLOSE_INPUT=34 TIMEOUT=300
+< OK OPEN_RELAY=4 CLOSE_RELAY=5 HALT_RELAY=6 OPEN_INPUT=7 CLOSE_INPUT=8 RAIN_INPUT=9 TIMEOUT=300
 ```
 
 ## ASCOM Driver Architecture
@@ -429,10 +429,10 @@ Driver:
 
 Hardware safety checks:
 
-- Verify OPEN command pulses only GPIO 25.
-- Verify CLOSE command pulses only GPIO 26.
-- Verify HALT pulls GPIO 32 high and clears open/close relays.
-- Verify state reads map GPIO 35/34 to open/closed/error consistently.
+- Verify OPEN command pulses only GPIO 4.
+- Verify CLOSE command pulses only GPIO 5.
+- Verify HALT pulls GPIO 6 high and clears open/close relays.
+- Verify state reads map GPIO 7/8 to open/closed/error consistently.
 - Verify repeated `OPEN` while moving does not re-trigger a relay pulse.
 
 ## Implementation Milestones

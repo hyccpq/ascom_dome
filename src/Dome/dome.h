@@ -1,12 +1,6 @@
 #ifndef DOME_HAND
 #define DOME_HAND
 
-#define PIN_OPEN_START 25
-#define PIN_CLOSE_START 26
-#define PIN_HALT_START 32
-#define PIN_OPEN 35
-#define PIN_CLOSE 34
-
 bool debug = false;
 unsigned long oldCy;
 unsigned long oldMillis;
@@ -34,13 +28,24 @@ void initDomeConfig() {
     Config.dome.enAutoClose = doc["enautoclose"];
     Config.dome.autoCloseTimeOut = doc["autoclose"];
     file.close();
+
+    Config.dome.pinStart = PIN_OPEN_START;
+    Config.dome.pinCloseStart = PIN_CLOSE_START;
+    Config.dome.pinHalt = PIN_HALT_START;
+    Config.dome.pinOpen = PIN_OPEN;
+    Config.dome.pinClose = PIN_CLOSE;
+    Config.dome.pinRainSensor = PIN_RAIN_SENSOR;
     Config.read.dome.isValid = true;
 
     pinMode(PIN_OPEN_START, OUTPUT);
     pinMode(PIN_CLOSE_START, OUTPUT);
     pinMode(PIN_HALT_START, OUTPUT);
+    digitalWrite(PIN_OPEN_START, LOW);
+    digitalWrite(PIN_CLOSE_START, LOW);
+    digitalWrite(PIN_HALT_START, LOW);
     pinMode(PIN_OPEN, INPUT);
     pinMode(PIN_CLOSE, INPUT);
+    pinMode(PIN_RAIN_SENSOR, INPUT);
 
 //    pinMode(Config.dome.pinStart, OUTPUT);
 //    pinMode(Config.dome.pinHalt, OUTPUT);
@@ -52,9 +57,11 @@ void saveDomeConfig() {
     String datasetup;
     JsonDocument doc;
     doc["pinstart"] = Config.dome.pinStart;
+    doc["pinclosestart"] = Config.dome.pinCloseStart;
     doc["pinhalt"] = Config.dome.pinHalt;
     doc["pinopen"] = Config.dome.pinOpen;
     doc["pinclose"] = Config.dome.pinClose;
+    doc["pinrain"] = Config.dome.pinRainSensor;
     doc["tout"] = Config.dome.movingTimeOut;
     doc["enautoclose"] = Config.dome.enAutoClose;
     doc["autoclose"] = Config.dome.autoCloseTimeOut;

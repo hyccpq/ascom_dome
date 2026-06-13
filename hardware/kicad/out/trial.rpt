@@ -1,0 +1,280 @@
+** Drc report for esp32_s3_dome_controller.kicad_pcb **
+** Created on 2026-05-28T13:46:40+0800 **
+
+** Found 40 DRC violations **
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(6.0000 mm, 6.0000 mm): Footprint MH1
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(85.4400 mm, 6.0000 mm): Footprint MH2
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(6.0000 mm, 81.6300 mm): Footprint MH3
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(85.4400 mm, 81.6300 mm): Footprint MH4
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(86.0000 mm, 22.0000 mm): Footprint J2
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(86.0000 mm, 37.0000 mm): Footprint J3
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(86.0000 mm, 52.0000 mm): Footprint J4
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(9.0000 mm, 76.0000 mm): Footprint J1
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(10.0000 mm, 13.0000 mm): Footprint J6
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(25.0000 mm, 13.0000 mm): Footprint J7
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(40.0000 mm, 13.0000 mm): Footprint J8
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(73.0000 mm, 13.0000 mm): Footprint J5
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(28.0000 mm, 49.0000 mm): Footprint U1
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(20.0000 mm, 76.0000 mm): Footprint U3
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(58.0000 mm, 18.0000 mm): Footprint U2
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(66.0000 mm, 22.0000 mm): Footprint K1
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(48.0000 mm, 26.0000 mm): Footprint Q1
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(42.0000 mm, 24.0000 mm): Footprint R1
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(56.0000 mm, 22.0000 mm): Footprint D1
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(66.0000 mm, 37.0000 mm): Footprint K2
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(48.0000 mm, 41.0000 mm): Footprint Q2
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(42.0000 mm, 39.0000 mm): Footprint R2
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(56.0000 mm, 37.0000 mm): Footprint D2
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(66.0000 mm, 52.0000 mm): Footprint K3
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(48.0000 mm, 56.0000 mm): Footprint Q3
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(42.0000 mm, 54.0000 mm): Footprint R3
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(56.0000 mm, 52.0000 mm): Footprint D3
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(14.0000 mm, 22.0000 mm): Footprint R4
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(29.0000 mm, 22.0000 mm): Footprint R5
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(44.0000 mm, 22.0000 mm): Footprint R6
+[lib_footprint_issues]: The footprint library 'Codex' was not found at '/Users/kalec/Desktop/Ascom-Alpacha-ESP32-Switch-Borad-Dome-Board/hardware/kicad/Codex.pretty'.
+    Local override; warning
+    @(73.0000 mm, 22.0000 mm): Footprint R8
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(6.0000 mm, 77.4300 mm): Reference field of MH3
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(42.0000 mm, 22.0000 mm): Reference field of R1
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(56.0000 mm, 19.8000 mm): Reference field of D1
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(6.0000 mm, 6.0000 mm): Circle on F.Silkscreen
+    @(6.0000 mm, 1.8000 mm): Reference field of MH1
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(10.0000 mm, 8.3000 mm): Reference field of J6
+    @(6.0000 mm, 6.0000 mm): Circle on F.Silkscreen
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(45.0000 mm, 8.0000 mm): PCB text '2L / M3 / Relay dry contacts / RS485 DNP' on F.Silkscreen
+    @(40.0000 mm, 8.3000 mm): Reference field of J8
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(85.4400 mm, 1.8000 mm): Reference field of MH2
+    @(85.4400 mm, 6.0000 mm): Circle on F.Silkscreen
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(85.4400 mm, 81.6300 mm): Circle on F.Silkscreen
+    @(85.4400 mm, 77.4300 mm): Reference field of MH4
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(6.0000 mm, 77.4300 mm): Reference field of MH3
+    @(6.0000 mm, 81.6300 mm): Circle on F.Silkscreen
+
+** Found 36 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(6.4600 mm, 76.0000 mm): PTH pad 1 [GND] of J1
+    @(17.7000 mm, 78.0000 mm): Pad 1 [GND] of U3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(18.0000 mm, 41.0000 mm): Pad 1 [GND] of U1 on F.Cu
+    @(28.0000 mm, 49.0000 mm): Pad GND_EP [GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(27.5400 mm, 13.0000 mm): PTH pad 2 [GND] of J7
+    @(12.5400 mm, 13.0000 mm): PTH pad 2 [GND] of J6
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(28.0000 mm, 49.0000 mm): Pad GND_EP [GND] of U1 on F.Cu
+    @(17.7000 mm, 78.0000 mm): Pad 1 [GND] of U3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(38.0000 mm, 41.0000 mm): Pad 40 [GND] of U1 on F.Cu
+    @(28.0000 mm, 49.0000 mm): Pad GND_EP [GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(42.5400 mm, 13.0000 mm): PTH pad 2 [GND] of J8
+    @(27.5400 mm, 13.0000 mm): PTH pad 2 [GND] of J7
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(42.5400 mm, 13.0000 mm): PTH pad 2 [GND] of J8
+    @(49.2000 mm, 26.9000 mm): Pad 2 [GND] of Q1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(49.2000 mm, 41.9000 mm): Pad 2 [GND] of Q2 on F.Cu
+    @(38.0000 mm, 41.0000 mm): Pad 40 [GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(49.2000 mm, 41.9000 mm): Pad 2 [GND] of Q2 on F.Cu
+    @(49.2000 mm, 26.9000 mm): Pad 2 [GND] of Q1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(49.2000 mm, 41.9000 mm): Pad 2 [GND] of Q2 on F.Cu
+    @(49.2000 mm, 56.9000 mm): Pad 2 [GND] of Q3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(61.0000 mm, 20.4000 mm): Pad 5 [GND] of U2 on F.Cu
+    @(49.2000 mm, 26.9000 mm): Pad 2 [GND] of Q1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(11.5400 mm, 76.0000 mm): PTH pad 2 [5V] of J1
+    @(22.3000 mm, 78.0000 mm): Pad 3 [5V] of U3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(54.5000 mm, 22.0000 mm): Pad 1 [5V] of D1 on F.Cu
+    @(54.5000 mm, 37.0000 mm): Track [5V] on F.Cu, length 6.8007 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(54.5000 mm, 52.0000 mm): Track [5V] on F.Cu, length 6.8007 mm
+    @(22.3000 mm, 78.0000 mm): Pad 3 [5V] of U3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(60.0000 mm, 18.0000 mm): PTH pad COIL+ [5V] of K1
+    @(54.5000 mm, 22.0000 mm): Pad 1 [5V] of D1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(54.5000 mm, 52.0000 mm): Track [5V] on F.Cu, length 6.8007 mm
+    @(54.5000 mm, 37.0000 mm): Track [5V] on F.Cu, length 6.8007 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(28.0000 mm, 38.0000 mm): Pad 3V3 [3V3] of U1 on F.Cu
+    @(30.0000 mm, 22.0000 mm): Pad 2 [3V3] of R5 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(28.0000 mm, 38.0000 mm): Pad 3V3 [3V3] of U1 on F.Cu
+    @(20.0000 mm, 73.5000 mm): Pad 4 [3V3] of U3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(30.0000 mm, 22.0000 mm): Pad 2 [3V3] of R5 on F.Cu
+    @(15.0000 mm, 22.0000 mm): Pad 2 [3V3] of R4 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(30.0000 mm, 22.0000 mm): Pad 2 [3V3] of R5 on F.Cu
+    @(45.0000 mm, 22.0000 mm): Pad 2 [3V3] of R6 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(55.0000 mm, 20.4000 mm): Pad 8 [3V3] of U2 on F.Cu
+    @(45.0000 mm, 22.0000 mm): Pad 2 [3V3] of R6 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(18.0000 mm, 43.4000 mm): Pad 4 [OPEN_GPIO4] of U1 on F.Cu
+    @(41.0000 mm, 24.0000 mm): Pad 1 [OPEN_GPIO4] of R1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(18.0000 mm, 45.8000 mm): Pad 5 [CLOSE_GPIO5] of U1 on F.Cu
+    @(41.0000 mm, 39.0000 mm): Pad 1 [CLOSE_GPIO5] of R2 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(18.0000 mm, 48.2000 mm): Pad 6 [STOP_GPIO6] of U1 on F.Cu
+    @(41.0000 mm, 54.0000 mm): Pad 1 [STOP_GPIO6] of R3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(13.0000 mm, 22.0000 mm): Pad 1 [OPEN_LIMIT_GPIO7] of R4 on F.Cu
+    @(7.4600 mm, 13.0000 mm): PTH pad 1 [OPEN_LIMIT_GPIO7] of J6
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(18.0000 mm, 50.6000 mm): Pad 7 [OPEN_LIMIT_GPIO7] of U1 on F.Cu
+    @(13.0000 mm, 22.0000 mm): Pad 1 [OPEN_LIMIT_GPIO7] of R4 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(18.0000 mm, 53.0000 mm): Pad 12 [CLOSE_LIMIT_GPIO8] of U1 on F.Cu
+    @(28.0000 mm, 22.0000 mm): Pad 1 [CLOSE_LIMIT_GPIO8] of R5 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(28.0000 mm, 22.0000 mm): Pad 1 [CLOSE_LIMIT_GPIO8] of R5 on F.Cu
+    @(22.4600 mm, 13.0000 mm): PTH pad 1 [CLOSE_LIMIT_GPIO8] of J7
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(18.0000 mm, 55.4000 mm): Pad 17 [RAIN_GPIO9] of U1 on F.Cu
+    @(43.0000 mm, 22.0000 mm): Pad 1 [RAIN_GPIO9] of R6 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(43.0000 mm, 22.0000 mm): Pad 1 [RAIN_GPIO9] of R6 on F.Cu
+    @(37.4600 mm, 13.0000 mm): PTH pad 1 [RAIN_GPIO9] of J8
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(57.5000 mm, 22.0000 mm): Track [OPEN_COIL_LOW] on F.Cu, length 4.7170 mm
+    @(48.0000 mm, 25.0000 mm): Pad 3 [OPEN_COIL_LOW] of Q1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(57.5000 mm, 37.0000 mm): Track [CLOSE_COIL_LOW] on F.Cu, length 4.7170 mm
+    @(48.0000 mm, 40.0000 mm): Pad 3 [CLOSE_COIL_LOW] of Q2 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(57.5000 mm, 52.0000 mm): Track [STOP_COIL_LOW] on F.Cu, length 4.7170 mm
+    @(48.0000 mm, 55.0000 mm): Pad 3 [STOP_COIL_LOW] of Q3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(59.0000 mm, 20.4000 mm): Pad 6 [RS485_A] of U2 on F.Cu
+    @(72.0000 mm, 22.0000 mm): Pad 1 [RS485_A] of R8 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(72.0000 mm, 22.0000 mm): Pad 1 [RS485_A] of R8 on F.Cu
+    @(70.4600 mm, 13.0000 mm): PTH pad 1 [RS485_A] of J5
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(57.0000 mm, 20.4000 mm): Pad 7 [RS485_B] of U2 on F.Cu
+    @(74.0000 mm, 22.0000 mm): Track [RS485_B] on F.Cu, length 9.1308 mm
+
+** Found 0 Footprint errors **
+
+** End of Report **

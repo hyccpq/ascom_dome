@@ -48,9 +48,11 @@ struct domeAlpacaStruct{
 
 struct domeConfig{
   unsigned int pinStart;
+  unsigned int pinCloseStart;
   unsigned int pinHalt;
   unsigned int pinOpen;
   unsigned int pinClose;
+  unsigned int pinRainSensor;
   unsigned int movingTimeOut = 20;
   bool enAutoClose;
   unsigned int autoCloseTimeOut = 20;
